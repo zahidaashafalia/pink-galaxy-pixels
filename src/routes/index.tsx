@@ -446,7 +446,7 @@ function Index() {
               of your vision.
             </p>
             <a
-              href="mailto:hello@alexmorgan.dev"
+              href="mailto:zahidaasafalia@gmail.com"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-ink px-7 py-3 text-sm text-white transition-transform hover:scale-105"
             >
               Let's Talk ✈
