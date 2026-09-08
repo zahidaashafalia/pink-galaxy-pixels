@@ -140,5 +140,101 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --color-galaxy: var(--galaxy);
+  --color-galaxy-glow: var(--galaxy-glow);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+}
+
+:root {
+  --galaxy: oklch(0.68 0.24 348);
+  --galaxy-glow: oklch(0.78 0.19 330);
+  --cream: oklch(0.97 0.005 320);
+  --ink: oklch(0.16 0.03 320);
+  --gradient-galaxy: linear-gradient(120deg, var(--galaxy), var(--galaxy-glow));
+  --shadow-glow: 0 24px 80px -20px color-mix(in oklab, var(--galaxy) 55%, transparent);
+}
+
+@utility text-galaxy-gradient {
+  background: var(--gradient-galaxy);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility surface-night {
+  background:
+    radial-gradient(120% 90% at 20% 0%, color-mix(in oklab, var(--galaxy) 22%, transparent), transparent 60%),
+    radial-gradient(90% 80% at 90% 30%, color-mix(in oklab, var(--galaxy-glow) 18%, transparent), transparent 60%),
+    oklch(0.11 0.035 320);
+}
+
+@utility card-3d {
+  transform-style: preserve-3d;
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s ease;
+  &:hover {
+    transform: rotateX(6deg) rotateY(-8deg) translateY(-10px) scale(1.03);
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@utility glass-panel {
+  background: color-mix(in oklab, oklch(0.2 0.05 320) 55%, transparent);
+  border: 1px solid color-mix(in oklab, var(--galaxy) 30%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+@keyframes float-3d {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotateX(4deg) rotateY(-5deg);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@utility animate-float-3d {
+  animation: float-3d 7s ease-in-out infinite;
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 26s linear infinite;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
