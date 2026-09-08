@@ -151,14 +151,30 @@ function Index() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link to="/contact" className="transition-colors hover:text-white">
+                Contact
+              </Link>
+            </li>
           </ul>
-          <a
-            href="#contact"
-            className="rounded-full border border-galaxy/60 px-5 py-2 text-sm text-white/90 transition-all hover:bg-galaxy/20 hover:shadow-[var(--shadow-glow)]"
-          >
-            Let's Talk →
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/6289682537741"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden rounded-full border border-white/20 px-4 py-2 text-xs text-white/80 transition-colors hover:bg-white/10 sm:inline-block"
+            >
+              089682537741
+            </a>
+            <Link
+              to="/contact"
+              className="rounded-full border border-galaxy/60 px-5 py-2 text-sm text-white/90 transition-all hover:bg-galaxy/20 hover:shadow-[var(--shadow-glow)]"
+            >
+              Let's Talk →
+            </Link>
+          </div>
         </nav>
+
       </header>
 
       {/* HERO */}
