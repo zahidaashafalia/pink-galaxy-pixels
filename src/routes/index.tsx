@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-import heroPhones from "@/assets/hero-phones.jpg";
+import heroVisual from "@/assets/hero-phones.jpg";
 import portrait from "@/assets/portrait.jpg";
 import projectsShot from "@/assets/projects.jpg";
 import ctaCrystal from "@/assets/cta-crystal.jpg";
@@ -9,16 +9,20 @@ import ctaCrystal from "@/assets/cta-crystal.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alex Morgan — Flutter Developer Portfolio" },
+      { title: "Zahida Asafalia — Web Designer & Developer Portfolio" },
       {
         name: "description",
         content:
-          "Flutter developer crafting premium, high-performance mobile experiences for startups and global brands.",
+          "Pelajar PPLG SMKN 1 Bangsri yang passionate di Web Design, UI Design, dan pengembangan website.",
       },
-      { property: "og:title", content: "Alex Morgan — Flutter Developer Portfolio" },
+      {
+        property: "og:title",
+        content: "Zahida Asafalia — Web Designer & Developer Portfolio",
+      },
       {
         property: "og:description",
-        content: "Premium mobile experiences built with Flutter, designed to feel effortless.",
+        content:
+          "Landing page, dashboard, dan website modern dibuat dengan Figma, Laravel, dan semangat belajar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -103,31 +107,113 @@ function Wave({ flip = false }: { flip?: boolean }) {
 /* ---------- data ---------- */
 
 const skills = [
-  { name: "Dart", level: "90%", note: "Language" },
-  { name: "Provider", level: "90%", note: "State Management" },
-  { name: "Firebase", level: "85%", note: "Backend" },
-  { name: "RESTful API", level: "90%", note: "Integration" },
-  { name: "UI/UX", level: "88%", note: "Design" },
+  { name: "Figma", level: "95%", note: "UI Design" },
+  { name: "HTML & CSS", level: "90%", note: "Frontend" },
+  { name: "JavaScript", level: "85%", note: "Language" },
+  { name: "PHP / Laravel", level: "80%", note: "Backend" },
+  { name: "MySQL", level: "82%", note: "Database" },
+  { name: "Canva", level: "90%", note: "Graphic Design" },
+  { name: "GitHub", level: "85%", note: "Version Control" },
+  { name: "VS Code", level: "90%", note: "Editor" },
 ];
 
 const projects = [
-  { name: "Fintra", desc: "A modern finance app for interior money management.", tags: ["Flutter", "Firebase", "Charts"] },
-  { name: "Healora", desc: "Health & wellness app that helps users build better habits.", tags: ["Flutter", "API", "Dio"] },
-  { name: "Shopzee", desc: "E-commerce app with seamless shopping experience.", tags: ["Flutter", "Stripe", "Firebase"] },
-  { name: "Travelio", desc: "Travel companion app for exploring the world.", tags: ["Flutter", "Maps", "API"] },
+  {
+    name: "SiPintu SMKN 1 Bangsri",
+    desc: "Sistem informasi pintu sekolah untuk manajemen kunjungan dan absensi siswa secara digital.",
+    tags: ["Laravel", "MySQL", "Bootstrap"],
+  },
+  {
+    name: "Gateway SMKN 1 Bangsri",
+    desc: "Portal informasi sekolah yang memudahkan akses berita, agenda, dan layanan akademik.",
+    tags: ["PHP", "HTML/CSS", "JavaScript"],
+  },
+  {
+    name: "Texcer Hot",
+    desc: "Landing page produk dengan tampilan modern, responsif, dan mudah dinavigasi.",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Website Jadwal Pelajaran",
+    desc: "Aplikasi jadwal pelajaran interaktif untuk siswa dan guru SMKN 1 Bangsri.",
+    tags: ["PHP", "MySQL", "Bootstrap"],
+  },
 ];
 
 const timeline = [
-  { years: "2018 – 2019", role: "Junior Developer", org: "StarX Labs", text: "Worked on building cross-platform apps and learned the foundations of Flutter." },
-  { years: "2019 – 2021", role: "Flutter Developer", org: "TechNova Solutions", text: "Built and shipped multiple production apps for startups and SMEs." },
-  { years: "2021 – 2023", role: "Senior Developer", org: "CodeWave Studios", text: "Led a team of developers and delivered complex projects for global clients." },
-  { years: "2023 – Present", role: "Freelance Developer", org: "Working Worldwide", text: "Helping brands and startups turn ideas into beautiful mobile experiences." },
+  {
+    years: "2022 – 2023",
+    role: "Mulai Belajar Web",
+    org: "SMKN 1 Bangsri",
+    text: "Mengenal dasar-dasar HTML, CSS, dan desain web di jurusan PPLG.",
+  },
+  {
+    years: "2023 – 2024",
+    role: "Anggota Web Development",
+    org: "Taksan Nawasena",
+    text: "Bergabung di Divisi TIK, belajar kolaborasi dan membangun proyek bersama tim.",
+  },
+  {
+    years: "2024 – 2025",
+    role: "Proyek Nyata",
+    org: "Sekolah & UMKM",
+    text: "Membuat website sekolah, sistem informasi, dan landing page untuk berbagai kebutuhan.",
+  },
+  {
+    years: "2025 – Present",
+    role: "Pelajar & Freelance",
+    org: "SMKN 1 Bangsri",
+    text: "Terus mengasah skill UI/UX dan web development sambil membuka peluang kolaborasi.",
+  },
 ];
 
 const testimonials = [
-  { quote: "He truly understands both aesthetics and performance. Clean, scalable code.", name: "Sophia Bennett", role: "Product Manager" },
-  { quote: "Outstanding work! The app was delivered on time, with top-notch quality and attention to detail.", name: "James Carter", role: "CEO, Fintra", featured: true },
-  { quote: "A reliable developer who communicates well and goes the extra mile.", name: "Daniel Roberts", role: "Founder, Shopzee" },
+  {
+    quote: "Desain yang dibuat sangat rapi, modern, dan mudah digunakan. Komunikasinya juga baik.",
+    name: "Pembimbing Taksan Nawasena",
+    role: "Divisi TIK",
+  },
+  {
+    quote:
+      "Website sekolah kami jadi lebih profesional dan membantu banyak pihak. Kerja bagus!",
+    name: "Staf SMKN 1 Bangsri",
+    role: "Operator Sekolah",
+    featured: true,
+  },
+  {
+    quote: "Kreatif, detail, dan selalu tepat waktu dalam menyelesaikan setiap tugas.",
+    name: "Teman Kelas",
+    role: "Rekan PPLG",
+  },
+];
+
+const footerGroups = [
+  {
+    title: "Navigation",
+    links: [
+      { label: "Work", href: "#work" },
+      { label: "About", href: "#about" },
+      { label: "Skills", href: "#skills" },
+      { label: "Experience", href: "#experience" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "GitHub", href: "https://github.com/zahidaashafalia" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/asha-fally-027480422" },
+      { label: "Instagram", href: "https://www.instagram.com/ashafally" },
+      { label: "Resume", href: "#top" },
+    ],
+  },
+  {
+    title: "Connect",
+    links: [
+      { label: "Email", href: "mailto:zahidaasafalia@gmail.com" },
+      { label: "WhatsApp", href: "https://wa.me/6289682537741" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
 ];
 
 /* ---------- page ---------- */
@@ -174,7 +260,6 @@ function Index() {
             </Link>
           </div>
         </nav>
-
       </header>
 
       {/* HERO */}
@@ -182,17 +267,19 @@ function Index() {
         <div className="pointer-events-none absolute -top-40 left-1/2 size-[900px] -translate-x-1/2 rounded-full bg-galaxy/20 blur-[160px] animate-pulse-glow" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
           <Reveal>
-            <p className="mb-5 text-xs tracking-[0.35em] text-galaxy-glow uppercase">Flutter Developer</p>
+            <p className="mb-5 text-xs tracking-[0.35em] text-galaxy-glow uppercase">
+              Web Designer & Developer
+            </p>
             <h1 className="font-display text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
-              Crafting Premium
+              Crafting Modern
               <br />
-              Mobile <span className="text-galaxy-gradient">Experiences</span>
+              Web <span className="text-galaxy-gradient">Experiences</span>
               <br />
-              that <em className="italic">People Love</em>
+              with <em className="italic">Passion</em>
             </h1>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-white/60">
-              I design and build high-performance, beautiful and intuitive Flutter applications for
-              startups and global brands.
+              Pelajar PPLG di SMKN 1 Bangsri yang suka merancang landing page, dashboard, dan website
+              menggunakan Figma, Laravel, dan teknologi web modern.
             </p>
             <a
               href="#work"
@@ -205,16 +292,16 @@ function Index() {
           <Reveal delay={150}>
             <Tilt className="animate-float-3d">
               <img
-                src={heroPhones}
-                width={1200}
-                height={1008}
-                alt="Flutter app screens on floating phones over a pink galaxy"
+                src={heroVisual}
+                width={1344}
+                height={1120}
+                alt="Website mockups floating in pink galaxy space"
                 className="w-full rounded-3xl"
               />
             </Tilt>
             <div className="mt-[-3rem] ml-auto w-fit glass-panel rounded-full px-5 py-3 text-xs text-white/80">
               <span className="mr-2 inline-block size-2 rounded-full bg-galaxy-glow" />
-              Available for new opportunities
+              Open for new projects
             </div>
           </Reveal>
         </div>
@@ -232,7 +319,7 @@ function Index() {
                 width={912}
                 height={912}
                 loading="lazy"
-                alt="Watercolor portrait of Alex Morgan"
+                alt="Stylized portrait of Zahida Asafalia"
                 className="w-full max-w-md rounded-full"
               />
             </Tilt>
@@ -240,19 +327,21 @@ function Index() {
           <Reveal delay={120}>
             <p className="mb-4 text-xs tracking-[0.35em] text-galaxy uppercase">About Me</p>
             <h2 className="font-display text-4xl leading-tight md:text-5xl">
-              Code is my medium.
+              Design is my voice.
               <br />
-              Empathy is my <em className="italic text-galaxy">superpower.</em>
+              Code is my <em className="italic text-galaxy">canvas.</em>
             </h2>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-ink/60">
-              I'm a Flutter developer with 6+ years of experience building pixel-perfect,
-              high-performance mobile applications that solve real problems and create real impact.
+              Halo, aku Zahida Asafalia — biasa dipanggil Asha. Aku pelajar jurusan PPLG di SMKN 1
+              Bangsri yang passionate di Web Design, UI Design, dan pengembangan website. Aku terbiasa
+              merancang tampilan di Figma & Canva, lalu mengembangkannya dengan HTML, CSS, JavaScript,
+              PHP, dan Laravel.
             </p>
             <div className="mt-10 flex gap-12">
               {[
-                ["06+", "Years Experience"],
-                ["45+", "Projects Delivered"],
-                ["18+", "Happy Clients"],
+                ["04+", "Years Learning"],
+                ["08+", "Projects Done"],
+                ["03+", "Active Orgs"],
               ].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-display text-4xl">{n}</div>
@@ -272,13 +361,13 @@ function Index() {
           <Reveal>
             <p className="mb-4 text-xs tracking-[0.35em] text-galaxy-glow uppercase">My Skills</p>
             <h2 className="font-display text-4xl md:text-5xl">
-              Expertise with
+              Tools I use with
               <br />
-              <em className="italic text-galaxy-gradient">Passion.</em>
+              <em className="italic text-galaxy-gradient">Love.</em>
             </h2>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
-              I combine creativity and technical excellence to build products that are fast,
-              beautiful and future-ready.
+              Kombinasi desain dan coding untuk membuat website yang tidak hanya cantik, tapi juga
+              berfungsi dengan baik.
             </p>
           </Reveal>
 
@@ -286,9 +375,9 @@ function Index() {
             <Reveal>
               <div className="card-3d glass-panel row-span-2 flex h-full flex-col items-center justify-center gap-4 rounded-3xl p-10">
                 <div className="grid size-20 place-items-center rounded-2xl bg-[image:var(--gradient-galaxy)] font-display text-3xl">
-                  F
+                  W
                 </div>
-                <div className="text-lg font-medium">Flutter</div>
+                <div className="text-lg font-medium">Web</div>
                 <div className="text-xs text-white/50">95%</div>
               </div>
             </Reveal>
@@ -317,9 +406,9 @@ function Index() {
           <Reveal>
             <p className="mb-4 text-xs tracking-[0.35em] text-galaxy-glow uppercase">Featured Work</p>
             <h2 className="font-display text-4xl md:text-5xl">
-              Digital experiences <span className="text-galaxy">/</span>
+              Projects that show
               <br />
-              that make an <em className="italic text-galaxy-gradient">impact.</em>
+              my <em className="italic text-galaxy-gradient">growth.</em>
             </h2>
           </Reveal>
 
@@ -330,7 +419,7 @@ function Index() {
                 width={1408}
                 height={800}
                 loading="lazy"
-                alt="Four Flutter app project mockups"
+                alt="Collage of website project mockups"
                 className="w-full rounded-3xl"
               />
             </Tilt>
@@ -344,7 +433,10 @@ function Index() {
                   <p className="mt-2 text-xs leading-relaxed text-white/55">{p.desc}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {p.tags.map((t) => (
-                      <span key={t} className="rounded-full border border-galaxy/40 px-3 py-1 text-[10px] text-white/70">
+                      <span
+                        key={t}
+                        className="rounded-full border border-galaxy/40 px-3 py-1 text-[10px] text-white/70"
+                      >
                         {t}
                       </span>
                     ))}
@@ -366,7 +458,7 @@ function Index() {
             <h2 className="font-display text-4xl md:text-5xl">
               The journey
               <br />
-              that <em className="italic text-galaxy">shaped me.</em>
+              that <em className="italic text-galaxy">shapes me.</em>
             </h2>
           </Reveal>
           <div className="relative mt-14 grid gap-10 md:grid-cols-4">
@@ -402,9 +494,9 @@ function Index() {
           <Reveal>
             <p className="mb-4 text-xs tracking-[0.35em] text-galaxy-glow uppercase">Testimonials</p>
             <h2 className="font-display text-4xl md:text-5xl">
-              People <em className="italic text-galaxy-gradient">love</em> working
+              Words from
               <br />
-              with me.
+              people I <em className="italic text-galaxy-gradient">worked with.</em>
             </h2>
           </Reveal>
           <div className="grid gap-5 md:grid-cols-3" style={{ perspective: "1200px" }}>
@@ -412,7 +504,9 @@ function Index() {
               <Reveal key={t.name} delay={80 * i}>
                 <div
                   className={`card-3d glass-panel h-full rounded-2xl p-6 ${
-                    t.featured ? "shadow-[var(--shadow-glow)] md:-translate-y-6 md:scale-105" : "opacity-70"
+                    t.featured
+                      ? "shadow-[var(--shadow-glow)] md:-translate-y-6 md:scale-105"
+                      : "opacity-70"
                   }`}
                 >
                   <div className="font-display text-3xl text-galaxy">“</div>
@@ -442,8 +536,8 @@ function Index() {
               in mind?
             </h2>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/60">
-              I'm always open to discussing new projects, creative ideas or opportunities to be part
-              of your vision.
+              Aku terbuka untuk diskusi proyek, kolaborasi, atau sekadar bertanya seputar desain dan
+              pengembangan website.
             </p>
             <a
               href="mailto:zahidaasafalia@gmail.com"
@@ -476,34 +570,44 @@ function Index() {
                 A
               </span>
               <div>
-                <div className="font-medium tracking-wide">ALEX MORGAN</div>
+                <div className="font-medium tracking-wide">ASHA</div>
                 <div className="text-[10px] tracking-[0.3em] text-white/40 uppercase">
-                  Flutter Developer
+                  Web Designer & Developer
                 </div>
               </div>
             </div>
           </div>
-          {[
-            ["Navigation", ["Work", "About", "Skills", "Experience"]],
-            ["Resources", ["Blog", "Case Studies", "GitHub", "Resume"]],
-            ["Connect", ["LinkedIn", "Dribbble", "Twitter", "Email"]],
-          ].map(([title, items]) => (
-            <div key={title as string}>
-              <div className="mb-4 text-xs text-white/80">{title as string}</div>
+          {footerGroups.map((group) => (
+            <div key={group.title}>
+              <div className="mb-4 text-xs text-white/80">{group.title}</div>
               <ul className="space-y-2 text-xs text-white/45">
-                {(items as string[]).map((it) => (
-                  <li key={it}>
-                    <a href="#top" className="transition-colors hover:text-galaxy-glow">
-                      {it}
-                    </a>
-                  </li>
-                ))}
+                {group.links.map((link) => {
+                  const isExternal = link.href.startsWith("http") || link.href.startsWith("mailto");
+                  return (
+                    <li key={link.label}>
+                      {isExternal ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="transition-colors hover:text-galaxy-glow"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link to={link.href} className="transition-colors hover:text-galaxy-glow">
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
         </div>
         <div className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-[11px] text-white/35">
-          © 2026 Alex Morgan. All rights reserved.
+          © 2026 Zahida Asafalia. All rights reserved.
         </div>
       </footer>
     </main>
