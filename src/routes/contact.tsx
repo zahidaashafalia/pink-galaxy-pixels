@@ -4,16 +4,19 @@ import { useState, type FormEvent } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Kontak — Alex Morgan, Flutter Developer" },
+      { title: "Kontak — Zahida Asafalia, Web Designer & Developer" },
       {
         name: "description",
         content:
-          "Kirim pesan langsung atau hubungi lewat WhatsApp untuk proyek aplikasi Flutter Anda.",
+          "Hubungi Zahida Asafalia untuk proyek web design, UI design, atau pengembangan website.",
       },
-      { property: "og:title", content: "Kontak — Alex Morgan, Flutter Developer" },
+      {
+        property: "og:title",
+        content: "Kontak — Zahida Asafalia, Web Designer & Developer",
+      },
       {
         property: "og:description",
-        content: "Kirim pesan atau chat WhatsApp untuk membahas proyek aplikasi mobile Anda.",
+        content: "Kirim pesan atau chat WhatsApp untuk membahas proyek website kamu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,6 +28,12 @@ export const Route = createFileRoute("/contact")({
 const EMAIL = "zahidaasafalia@gmail.com";
 const PHONE = "089682537741";
 const WA = "6289682537741";
+
+const socials = [
+  { name: "GitHub", href: "https://github.com/zahidaashafalia" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/asha-fally-027480422" },
+  { name: "Instagram", href: "https://www.instagram.com/ashafally" },
+];
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -115,6 +124,23 @@ function ContactPage() {
             >
               Telepon {PHONE}
             </a>
+
+            <div className="glass-panel rounded-3xl p-6">
+              <div className="text-[11px] tracking-[0.3em] text-white/40 uppercase">Media Sosial</div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {socials.map((s) => (
+                  <a
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-galaxy/60 px-4 py-2 text-xs text-white/90 transition-all hover:bg-galaxy/20 hover:shadow-[var(--shadow-glow)]"
+                  >
+                    {s.name}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
